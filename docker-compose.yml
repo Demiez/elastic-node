@@ -1,0 +1,22 @@
+version: '2.2'
+services:
+  elasticsearch:
+    image: elasticsearch:7.8.1
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      nproc: 3000
+      nofile: 65536
+      memlock: -1
+    mem_limit: 8g
+    ports:
+      - 127.0.0.1:9200:9200
+    networks:
+      - elastic
+
+networks:
+  elastic:
+    driver: bridge

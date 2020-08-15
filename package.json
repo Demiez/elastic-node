@@ -1,0 +1,23 @@
+{
+  "name": "elastic-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node es-connection-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Demiez/elastic-node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Demiez/elastic-node/issues"
+  },
+  "homepage": "https://github.com/Demiez/elastic-node#readme",
+  "dependencies": {
+    "elasticsearch": "^16.7.1"
+  }
+}
